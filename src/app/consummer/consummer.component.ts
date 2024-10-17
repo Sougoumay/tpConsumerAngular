@@ -17,7 +17,7 @@ export class ConsummerComponent implements OnInit, OnDestroy {
   private subs: Subscription[] = [];
   private service = inject(ConsummerService);
 
-  displayedColumns: string[] = ['id', 'civility', 'firstname', 'lastname', 'email', 'phone', 'createdAt', 'updatedAt'];
+  displayedColumns: string[] = ['id', 'civility', 'firstname', 'lastname', 'email', 'phone', 'createdAt', 'updatedAt','action'];
   consummers : Consummer[] = [];
 
   ngOnInit(): void {
@@ -41,6 +41,19 @@ export class ConsummerComponent implements OnInit, OnDestroy {
         }
       })
     }
+  }
+
+  delete(id : number) : void {
+    console.log(`id = ${id}`)
+    this.service.deleteConsumer(id).subscribe(
+      () => {
+        this.service.getConsummers('').subscribe({
+          next : (data) => {
+            this.consummers = data;
+          }
+        });
+      }
+    );
   }
 
   ngOnDestroy(): void {

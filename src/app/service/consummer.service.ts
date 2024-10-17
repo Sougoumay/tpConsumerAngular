@@ -20,5 +20,18 @@ export class ConsummerService {
     return this.http.post<Consummer>('/api/consumers', consumer);
   }
 
+  getById(id : number) : Observable<Consummer> {
+    console.log(`consumer number ${id}`)
+    return this.http.get<Consummer>(`/api/consumers/${id}`);
+  }
+  
+  editConsummer(consumer : Consummer) : Observable<void> {
+    return this.http.put<void>('/api/consumers', consumer);
+  }
+
+  deleteConsumer(id : number) : Observable<void>  {
+    return this.http.delete<void>(`/api/consumers/${id}`)
+  }
+
 
 }

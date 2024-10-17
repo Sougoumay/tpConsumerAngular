@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { ConsumerEditComponent } from './consumer-edit/consumer-edit.component';
 import { MatSelectModule } from '@angular/material/select';
+import { CreateConsumerComponent } from './create-consumer/create-consumer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { MatSelectModule } from '@angular/material/select';
     HelpComponent, 
     HomeComponent, 
     PhonePipe, 
-    ConsummerComponent, ConsumerEditComponent
+    ConsummerComponent, ConsumerEditComponent, CreateConsumerComponent
   ],
   imports: [
     BrowserModule, 
