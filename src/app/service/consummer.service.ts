@@ -12,12 +12,13 @@ export class ConsummerService {
 
   constructor() { }
 
-  getConsummers() : Observable<Consummer[]> {
-    return this.http.get<Consummer[]>('/api/consumers');
-  }
-
-  findByQuery(name : string | null) : Observable<Consummer[]> {
+  getConsummers(name : string | null) : Observable<Consummer[]> {
     return this.http.get<Consummer[]>('/api/consumers?q='+name);
   }
+
+  createConsummer(consumer : Consummer) : Observable<Consummer> {
+    return this.http.post<Consummer>('/api/consumers', consumer);
+  }
+
 
 }

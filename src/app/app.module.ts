@@ -16,9 +16,10 @@ import { PhonePipe } from './common/phone.pipe';
 import { ConsummerComponent } from './consummer/consummer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { ConsumerDetailsComponent } from './consumer-details/consumer-details.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import { ConsumerEditComponent } from './consumer-edit/consumer-edit.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,7 @@ import { MatListModule } from '@angular/material/list';
     HelpComponent, 
     HomeComponent, 
     PhonePipe, 
-    ConsummerComponent, 
-    ConsumerDetailsComponent
+    ConsummerComponent, ConsumerEditComponent
   ],
   imports: [
     BrowserModule, 
@@ -39,7 +39,8 @@ import { MatListModule } from '@angular/material/list';
     MatTableModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatSelectModule
   ],
   providers: [
     provideAnimationsAsync(),
