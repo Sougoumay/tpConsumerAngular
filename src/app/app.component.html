@@ -5,8 +5,6 @@
     <span>Right Aligned Text</span>
   </mat-toolbar>
   <mat-toolbar color="primary">
-    <span>AngularCRM</span>
-    <span class="fill-remaining-space"></span>
     <span>
       <a
         mat-icon-button
@@ -16,7 +14,19 @@
       >
         <mat-icon>home</mat-icon>
       </a>
-      </span>
+    </span>
+    <span>
+      <a
+        mat-icon-button
+        matTooltip="Consummer"
+        routerLink="/consummer"
+        routerLinkActive="is-active"
+        >
+        <mat-icon>list_alt</mat-icon>
+      </a>
+    </span>
+    <span class="fill-remaining-space"></span>
+    
     <span>
       <a
         mat-icon-button
@@ -27,12 +37,9 @@
         <mat-icon>person</mat-icon>
       </a>
     </span>
+
+    
    </mat-toolbar>
 </div>
-
-{{myObservable | async}}
-
-
-
 
 <router-outlet></router-outlet>
