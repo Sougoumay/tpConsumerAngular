@@ -23,6 +23,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes
     //, {bindToComponentInputs : true} : ceci permet de recuperer les valeurs passé dans les params du query 
     //  si on met id = input<type>(). Donc on a pas besoin de faire activatedroute.snapshot...
+    // regardes comment il a fait ng g @angular/core:standalone
+    // regardes comment il a fait ng g @angular/core:control-flow
 
   )],
   exports: [RouterModule]
