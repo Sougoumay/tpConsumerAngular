@@ -20,7 +20,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes
+    //, {bindToComponentInputs : true} : ceci permet de recuperer les valeurs passé dans les params du query 
+    //  si on met @input() et en dessous le nom du paramètre. Donc on a pas besoin de faire activatedroute.snapshot...
+
+  )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
