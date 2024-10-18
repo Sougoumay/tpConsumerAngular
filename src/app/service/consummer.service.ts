@@ -26,7 +26,7 @@ export class ConsummerService {
   }
   
   editConsummer(consumer : Consummer) : Observable<void> {
-    return this.http.put<void>('/api/consumers', consumer);
+    return this.http.put<void>(`/api/consumers/${consumer.id}`, consumer);
   }
 
   deleteConsumer(id : number) : Observable<void>  {

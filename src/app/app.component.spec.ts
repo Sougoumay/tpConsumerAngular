@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Component, input, Input } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'crm-login',
@@ -22,7 +23,7 @@ class DummyMockComponent {
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterModule.forRoot([]), MatToolbarModule],
+      imports: [RouterModule.forRoot([]), MatToolbarModule, MatIconModule],
       declarations: [AppComponent, MockComponent, DummyMockComponent],
     }).compileComponents();
   });
